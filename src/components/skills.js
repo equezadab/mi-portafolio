@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faHtml5, faCss3, faJs, faAngular, faPython, faGit, faDev } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faHtml5, faCss3, faJs, faAngular, faPython, faGit, faDev} from '@fortawesome/free-brands-svg-icons';
+import { faFileCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from './CostumHooks';
 
 
@@ -26,6 +27,10 @@ const Skills = () => {
             icon: faAngular
         },
         {
+            name: 'TypeScript',
+            icon: faFileCode
+        },
+        {
             name: 'Python',
             icon: faPython
         },
@@ -35,7 +40,12 @@ const Skills = () => {
         },
         {
             name: 'SQL',
-            icon: faDev
+            icon:  faDatabase
+           
+        },
+        {
+            name: 'PostgreSQL',
+            icon:  faDatabase
            
         }
     ]);

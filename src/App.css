@@ -229,7 +229,8 @@ section{
                     overflow: hidden;
                     
                     & img{
-                        height: 400px;
+                        height: 100%;
+                        width: 100%;
                         border-radius: 10px;
                         box-shadow: 0 20px 40px #010824;
                     }
@@ -256,6 +257,21 @@ section{
                             border-radius: 15px;
                         }
                     }
+                    & .button-link {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color:  #365e53; /* Color de fondo del botón */
+                        color: white; /* Color del texto del botón */
+                        text-decoration: none; /* Eliminar subrayado del enlace */
+                        border: none; /* Eliminar borde */
+                        border-radius: 5px; /* Añadir bordes redondeados */
+                        cursor: pointer; /* Cambiar cursor al pasar el ratón */
+                        transition: background-color 0.3s; /* Efecto de transición suave */
+                      }
+                      
+                      & .button-link:hover {
+                        background-color:  #55978c; /* Color de fondo del botón al pasar el ratón */
+                      }
                 }
             }
             & .item:nth-child(2n){

@@ -2,6 +2,7 @@ import React, {useState, useRef} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import CustomHook from "./CostumHooks";
+import { faChrome } from "@fortawesome/free-brands-svg-icons";
 
 const Proyectos = () => {
     const [listaProyectos] = useState([
@@ -10,21 +11,24 @@ const Proyectos = () => {
             des: 'Desarrolló de aplicación web Notarium.',
             mission: 'Participé como FullStack Developer y fui parte del diseño',
             language: 'HTML5, CSS3, Angular, TypeScript y PostgreSQL',
-            images: '/project1.PNG'
+            web:'',
+            images: '/web-practica.png'
           },
           {
-            name: 'Project Real-time chating in website',
-            des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
-            mission: 'Back-end Developer, system analysis and design',
-            language: 'HTML5, CSS3, React JS, SockerIO,...',
-            images: '/project2.PNG'
+            name: 'Filtrador de Noticias',
+            des: 'Consumo de una Api(newsapi) para filtrar noticias, según país y categoría',
+            mission: 'FullStack Developer',
+            language: 'Angular y Typescript',
+            web:'https://filtrador-noticias.netlify.app/',
+            images: '/web-apiNoticias.PNG'
           },
           {
-            name: 'Project Real-time chating in website',
-            des: 'Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.',
-            mission: 'Back-end Developer, system analysis and design',
-            language: 'HTML5, CSS3, React JS, SockerIO,...',
-            images: '/avatart.png'
+            name: 'Landing-Page para emprendimiento Familiar - Aún en desarrollo',
+            des: 'Página para mostrar información y algunos productos',
+            mission: 'FullStack Developer',
+            language: 'React y jsx',
+            web: 'https://eljardindeemilia.netlify.app/',
+            images: '/web-jardin-emilia.png'
           },
         
     ])
@@ -37,7 +41,7 @@ const Proyectos = () => {
                 Mis Proyectos
             </div>
             <div className="des" ref={(el) => el && divs.current.push(el)}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis quae veniam amet nesciunt voluptatibus quis consectetur consequatur quisquam harum.
+               Algunos de los proyectos realizados.
             </div>
             <div className="lista" ref={(el) => el && divs.current.push(el)}>
                 {
@@ -52,7 +56,7 @@ const Proyectos = () => {
                         <div className="mission">
                             <div><FontAwesomeIcon icon={faPersonCircleQuestion} /></div>
                             <div>
-                                <h4>Objetivo Proyecto</h4>
+                                <h4>Cargo</h4>
                                 <div className="des">{value.mission}</div>
                             </div>
                         </div>
@@ -63,6 +67,15 @@ const Proyectos = () => {
                                 <div className="des">{value.language}</div>
                             </div>
                         </div>
+                        {value.web &&
+                        <div className="mission">
+                            <div><FontAwesomeIcon icon={faChrome} /></div>
+                            <div>
+                                <h4>Página Web</h4>
+                                <div className="des"><a className="button-link" href={value.web} target="_blank" rel="noopener noreferrer">Ir a web</a></div>
+                            </div>
+                        </div>
+                        }
                     </div>
                     </div>
                 ))
